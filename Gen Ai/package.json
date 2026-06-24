@@ -4,11 +4,13 @@
   "description": "Montclair Premium E-Commerce Monorepo Workspace",
   "private": true,
   "scripts": {
-    "install:all": "npm.cmd install --prefix client && npm.cmd install --prefix server",
-    "seed": "PATH=\"$PWD/tools/node-v22.13.1-darwin-arm64/bin:$PATH\" node server/scripts/seed.js",
-    "dev": "concurrently \"npm.cmd run dev --prefix client\" \"npm.cmd run dev --prefix server\"",
-    "build:client": "npm.cmd run build --prefix client",
-    "start:server": "npm.cmd run start --prefix server"
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "seed": "node server/scripts/seed.js",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js",
+    "build:client": "npm run build --prefix client",
+    "start:server": "npm run start --prefix server"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
