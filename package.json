@@ -1,0 +1,11 @@
+{
+  "name": "montclair-repository-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix \"Gen Ai\" && npm run install:all --prefix \"Gen Ai\"",
+    "build": "npm run build --prefix \"Gen Ai\"",
+    "start": "npm run start --prefix \"Gen Ai\"",
+    "dev": "npm run dev --prefix \"Gen Ai\""
+  }
+}
