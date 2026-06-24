@@ -1,0 +1,25 @@
+# Dependencies
+**/node_modules/
+
+# Production builds
+**/dist/
+**/dist-ssr/
+
+# Environment variables
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Local tools and binaries
+**/tools/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
