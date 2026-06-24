@@ -186,8 +186,13 @@ const products = [
 ];
 
 const seedDB = async () => {
+  if (!process.env.MONGO_URI) {
+    console.warn('--- MONGO_URI is not configured. Skipping seeding. ---');
+    process.exit(0);
+  }
+
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/montclair');
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('Connected to MongoDB for seeding...');
     
     // Clear existing products
